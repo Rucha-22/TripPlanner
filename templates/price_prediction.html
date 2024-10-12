@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main {
+            text-align: center;
+        }
+        .chart-container {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+        .central-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .flight-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .hotel-button {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+
+        <div class="chart-container">
+            <!-- Placeholder for pie chart -->
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <div class="central-card">
+            <h2>Price Overview</h2>
+            <p>Flight Price: ₹{{td['price']}}</p>
+            <p>Hotel Price: ₹{{ ht['price'] }}</p>
+        </div>
+
+        <div>
+            <a href="/flightticket">
+                <button class="flight-button">Flight Ticket</button>
+            </a>
+            <a href="/hotelticket">
+            <button class="hotel-button"> Hotel Ticket</button></a>
+        </div>
+        <a href="/">
+            <button class="home-button">Back to Home</button>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample data for the pie chart
+        const flightPrice = {{td['price'] }};
+        const hotelPrice = {{ht['price'] }};
+
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        const priceChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Flight Price', 'Hotel Price'],
+                datasets: [{
+                    data: [flightPrice, hotelPrice],
+                    backgroundColor: ['#4CAF50', '#008CBA'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                }
+            }
+        });
+    </script>
+</body>
+</html>

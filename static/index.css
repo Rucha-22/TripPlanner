@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Poppins", "Helvetica Neue";
+    color: #ffff;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(16, 19, 80, 0.471);
+    filter: grayscale(30%);
+    transition: background-image 1s ease-in-out;
+    z-index: -10000;
+
+    
+}
+
+
+.transparent-layer{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(7 8 39 / 20%);
+
+    z-index: -1000;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-bottom:40 px; /* Optional: Add padding if you want some space from the bottom */
+}
+
+.place {
+  color: #ffffff;
+  font-size: 45px;
+  line-height: 36px;
+  text-align: center;
+  
+}
+
+.city-name {
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vh;
+  width: 100vw;
+  bottom: 0px;
+  
+  justify-content: center;
+ backdrop-filter: blur(2.5px);
+}
+
+
+
+.form-container {
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+}
+
+.flight-form {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 20px; /* Space between form groups */
+  background-color: rgba(255, 255, 255, 0.695); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 2;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 600;
+  width: 100%;
+
+}
+
+input[type="date"],
+select {
+  display: flex;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 2;
+  width: 80%;
+  
+  justify-content: space-between;
+}
+
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top:27px ;
+  height: 50px;
+  background-color: #3300cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ff4d4d;
+}

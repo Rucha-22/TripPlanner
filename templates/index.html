@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Prif</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div class="background-container"></div>
+
+    <div class="transparent-layer"></div>
+    <div class="main">
+
+      <div class="form-container">
+        <form class="flight-form" action="/ticket" method="POST">
+          <div class="form-group">
+            <label for="fdate">From Date</label>
+            <input type="date" id="fdate" name="fdate">
+          </div>
+
+          <div class="form-group">
+            <label for="tdate">To Date</label>
+            <input type="date" id="tdate" name="tdate">
+          </div>
+          
+          <div class="form-group">
+            <label for="from">From</label>
+            <select id="from" name="from">
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Banglore">Banglore</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="to">To</label>
+            <select id="to" name="to">
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Banglore">Banglore</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="flightclass">Class</label>
+            <select id="flightclass" name="flightclass">
+              <option value="Business">Business</option>
+              <option value="Economy">Economy</option>
+            </select>
+          </div>
+
+          <!-- New Airlines Dropdown -->
+          <div class="form-group">
+            <label for="airline">Airline</label>
+            <select id="airline" name="airline">
+              <option value="SpiceJet">SpiceJet</option>
+              <option value="AirAsia">AirAsia</option>
+              <option value="Vistara">Vistara</option>
+              <option value="GO_FIRST">GO FIRST</option>
+              <option value="Indigo">Indigo</option>
+              <option value="Air_India">Air India</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="passengers">Passengers</label>
+            <select id="passengers" name="passengers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+      
+      <div class="location">
+
+        <div class="place"><h1 id="placename">Marine Drive</h1></div>
+        <div class="city">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25" fill="none"><path d="M12.5 13.5498C14.2259 13.5498 15.625 12.1507 15.625 10.4248C15.625 8.69891 14.2259 7.2998 12.5 7.2998C10.7741 7.2998 9.375 8.69891 9.375 10.4248C9.375 12.1507 10.7741 13.5498 12.5 13.5498Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.5023 2.0874C10.2921 2.0874 8.17253 2.96538 6.60972 4.52818C5.04692 6.09098 4.16895 8.2106 4.16895 10.4207C4.16895 12.3916 4.5877 13.6812 5.73145 15.1082L12.5023 22.9207L19.2731 15.1082C20.4169 13.6812 20.8356 12.3916 20.8356 10.4207C20.8356 8.2106 19.9576 6.09098 18.3948 4.52818C16.832 2.96538 14.7124 2.0874 12.5023 2.0874V2.0874Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span class="city-name">Mumbai, India</span>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+const images = [
+    'url(static/assets/mumbai.jpg)',
+    'url(static/assets/delhi.webp)',
+    'url(static/assets/hyderabad.jpg)',
+    'url(static/assets/Sultan_Tipu_Palace.jpg)',
+    'url(static/assets/howrabridge.avif)',
+    'url(static/assets/marinabeach.jpg)'
+];
+const place = ["Marine Drive", "Rajpath", "Charminar", "Tipu Sultan Palace", "Howrah Bridge", "Marina Beach"];
+const locations = ["Mumbai, India", "Delhi, India", "Hyderabad, India", "Bangalore, India", "Kolkata, India", "Chennai, India"];
+
+let currentIndex = 0;
+const backgroundContainer = document.querySelector('.background-container');
+const loc = document.querySelector('.city-name');
+const placename = document.querySelector('#placename');
+
+function changeBackgroundImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    backgroundContainer.style.backgroundImage = images[currentIndex];
+    loc.innerText = locations[currentIndex];
+    placename.innerText = place[currentIndex];
+}
+
+setInterval(changeBackgroundImage, 5000); // Change every 5 seconds
+
+// Set the initial background image
+backgroundContainer.style.backgroundImage = images[currentIndex];
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Hotels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .hotel-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            height: 45vh;
+        }
+        .hotel {
+            background-color: #fff;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+
+        }
+        .hotel img {
+            width: 100%;
+            height: 25vh;
+            object-fit: cover;
+        }
+        .hotel-info {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hotel-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hotel-facilities {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .hotel-facilities i {
+            font-size: 24px;
+        }
+        .select-button {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            background-color: #0e1663;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .select-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <h1>Select Your Hotel</h1>
+
+    <div class="hotel-container">
+        <!-- Hotel 1 -->
+        <div class="hotel">
+            <img id="hotel1-img" alt="Hotel 1">
+            <div class="hotel-info">
+                <div class="hotel-name">Hotel Paradise</div>
+                <div class="hotel-facilities">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimming-pool"></i>
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <button class="select-button">Select</button>
+            </div>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="hotel">
+            <img id="hotel2-img" alt="Hotel 2">
+            <div class="hotel-info">
+                <div class="hotel-name">Seaside Resort</div>
+                <div class="hotel-facilities">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <button class="select-button">Select</button>
+            </div>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="hotel">
+            <img id="hotel3-img" alt="Hotel 3">
+            <div class="hotel-info">
+                <div class="hotel-name">Mountain Retreat</div>
+                <div class="hotel-facilities">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-fireplace"></i>
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <button class="select-button">Select</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch random hotel images using Unsplash API
+        async function fetchHotelImages() {
+            const apiKey = 'RjE1xc9hZ9ug9uFLlaixthZJRtXr80BGw2yKtiFuF40';  // Add your Unsplash API key here
+            const urls = [
+                `https://api.unsplash.com/photos/random?query=hotel&client_id=${apiKey}`,
+                `https://api.unsplash.com/photos/random?query=hotel&client_id=${apiKey}`,
+                `https://api.unsplash.com/photos/random?query=hotel&client_id=${apiKey}`
+            ];
+            
+            const imageElements = [
+                document.getElementById('hotel1-img'),
+                document.getElementById('hotel2-img'),
+                document.getElementById('hotel3-img')
+            ];
+            
+            for (let i = 0; i < urls.length; i++) {
+                try {
+                    const response = await fetch(urls[i]);
+                    const data = await response.json();
+                    imageElements[i].src = data.urls.regular; // Use 'regular' image size from Unsplash
+                } catch (error) {
+                    console.error('Error fetching image:', error);
+                }
+            }
+        }
+
+        // Call the function on page load
+        fetchHotelImages();
+    </script>
+
+</body>
+</html>

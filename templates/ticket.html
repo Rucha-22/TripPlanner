@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/ticket.css">
+</head>
+<body>
+    <div class="main">
+<div class="ticketcontainer">
+
+        <div class="left">
+            <div class="head">
+                <div class="headcontent">
+                  
+                    
+                    Boarding pass</div>
+                    <img src="static/assets/icons/departures.png" alt="globe" id="headicon" >
+            </div>
+            <div class="leftcont">
+                <div id="row1">
+                    <div id="r1c1">Passenger</div>
+                    <div id="r1c2">Seat No.</div>
+                    <div id="r2c1">Rucha Gavade</div>
+                    <div id="r2c2">A 515</div>
+                </div>
+
+    <div class="row23">
+       
+    <div><img src="static/assets/barcode.png" id="qr"></div>
+    <div class="verticalrow">
+                <div id="row2">
+                 
+                    <div id="dest">
+                        <div id="ft">
+                        {{td['from_code']}} 
+                        <img src="static/assets/icons/plane.png" alt="airplane" id="airplane" >
+                        
+                        {{td['to_code']}} </div>
+                        <div id="airline">{{td["airline"]}}{{td["flight"]}}</div>
+                    </div>
+                 
+
+                </div>
+
+
+
+                <div id="row3" style="justify-content: space-around;">
+                   <div class="date">
+                    <span id="datekeyword">Date</span>
+                    <span id="flight-date">{{td['date']}}</span>
+                   </div>
+
+                   <div class="time">
+                    <span id="timekeyword">Depature Time</span>
+                    <span id="flight-time" style="text-align: center;">10:20 am</span>
+                   </div>
+
+                   <div class="flightclass">
+                    <span id="classkeyword">Class</span>
+                    <span id="flight-time">{{td['flight_class']}}</span>
+                   </div>
+                </div>
+                <div class="row4">
+
+
+                    <div class="price"  style="padding-left: 12%;">
+                        <span id="price">Price</span>
+                        <span id="priceest">₹{{td['price']}}</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+    
+        </div>
+
+
+            
+        </div>
+    </div>
+
+
+        <div class="right">
+
+
+
+
+            <div id="pic1">
+
+                <div id="img1" >
+
+
+                    <img src={{td['from_img']}} alt="Mumbai" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div id="img1-name">{{td['from']}},India</div>
+            </div>
+            <div id="pic2"> 
+                <div id="img2"> <img src={{td['to_img']}} alt="Mumbai" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;"></div>
+                <div id="img2-name">{{td['to']}},India</div>
+            </div>
+            
+        </div>
+
+        <a href="/pricepred">
+            <button class="hotel-button">Back to Price Prediction</button>
+        </a>
+    </div></div>
+  
+</body>
+</html>
