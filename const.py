@@ -1,39 +1,39 @@
 hotels={
     "Banglore": [
         {
-            "name": "OYO Flagship Mk Residency",
+            "name": "The Oberoi Bengaluru",
             "price": 6.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Mount City Park Hotel Madiwala",
+            "name": "The Leela Palace Bengaluru",
             "price": 7.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO Flagship Raj Residency",
+            "name": "H&R Villa",
             "price": 7.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Collection O S M SUITES",
+            "name": "Conrad Bengaluru",
             "price": 7.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO 82074 Hotel Aishwarya Comfort",
+            "name": "Taj West End",
             "price": 8.0,
             "image_path": "../static/assets/"
         }
     ],
     "Chennai": [
         {
-            "name": "OYO 15018 Golden Manor Near Nehru Stadium",
+            "name": "The Leela Palace Chennai",
             "price": 8.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Super Collection O Planet Grande By Elite Hospitality",
+            "name": "ITC Grand Chola, a Luxury Collection Hotel, Chennai",
             "price": 10.0,
             "image_path": "../static/assets/"
         },
@@ -82,7 +82,7 @@ hotels={
     ],
     "Hydrabad": [
         {
-            "name": "Ruqaiyah Manzil",
+            "name": "Taj Falaknuma Palace",
             "price": 7.0,
             "image_path": "../static/assets/"
         },

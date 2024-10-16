@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trip Prif</title>
+    <title>Trip Price Predictor</title>
     <link rel="stylesheet" href="static/index.css">
 </head>
 <body>
@@ -16,12 +16,12 @@
         <form class="flight-form" action="/ticket" method="POST">
           <div class="form-group">
             <label for="fdate">From Date</label>
-            <input type="date" id="fdate" name="fdate">
+            <input type="date" id="fdate" name="fdate" required>
           </div>
 
           <div class="form-group">
             <label for="tdate">To Date</label>
-            <input type="date" id="tdate" name="tdate">
+            <input type="date" id="tdate" name="tdate" required>
           </div>
           
           <div class="form-group">
@@ -99,12 +99,14 @@
 
     <script>
 const images = [
+  
     'url(static/assets/mumbai.jpg)',
     'url(static/assets/delhi.webp)',
     'url(static/assets/hyderabad.jpg)',
     'url(static/assets/Sultan_Tipu_Palace.jpg)',
     'url(static/assets/howrabridge.avif)',
     'url(static/assets/marinabeach.jpg)'
+    
 ];
 const place = ["Marine Drive", "Rajpath", "Charminar", "Tipu Sultan Palace", "Howrah Bridge", "Marina Beach"];
 const locations = ["Mumbai, India", "Delhi, India", "Hyderabad, India", "Bangalore, India", "Kolkata, India", "Chennai, India"];
@@ -125,6 +127,14 @@ setInterval(changeBackgroundImage, 5000); // Change every 5 seconds
 
 // Set the initial background image
 backgroundContainer.style.backgroundImage = images[currentIndex];
+
+// Set min date to today for date inputs
+const fdateInput = document.getElementById('fdate');
+const tdateInput = document.getElementById('tdate');
+const today = new Date().toISOString().split('T')[0];
+
+fdateInput.setAttribute('min', today);
+tdateInput.setAttribute('min', today);
     </script>
 </body>
 </html>

@@ -70,11 +70,13 @@ def submit_ticket():
     })
 
     print(input_features)
-    
-    # Predict the price using the trained model
+
     price_prediction = flightmodel.predict(input_features)[0]  # Predicting for one instance
     print("price_prediction",price_prediction)
-    # Package data for template rendering
+    
+    if from_city ==to_city:
+        price_prediction = 0.00
+
     ticket_details = {
         "from": from_city,
         "to": to_city,
@@ -105,10 +107,7 @@ def submit_hotel_selection():
     checkout_date = request.form.get("checkout_date")
     td = session.get('ticket_details')
   
-  
-# Convert JSON string back to dictionary
- 
-    # Prepare data for the model
+
     hotel_data = pd.DataFrame({
         "name": [hotel_name],
         "checkin_date": [checkin_date],
