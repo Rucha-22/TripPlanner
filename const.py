@@ -38,12 +38,12 @@ hotels={
             "image_path": "../static/assets/"
         },
         {
-            "name": "Broad Lands",
+            "name": "Mer Vue Villa, Kovalam, ECR, Chennai",
             "price": 10.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO RedFox Hotel",
+            "name": "Taj Wellington Mews Chennai",
             "price": 11.0,
             "image_path": "../static/assets/"
         },
