@@ -48,34 +48,34 @@ hotels={
             "image_path": "../static/assets/"
         },
         {
-            "name": "SAROVAR INN",
+            "name": "Radisson Blu Hotel & Suites GRT Chennai",
             "price": 11.0,
             "image_path": "../static/assets/"
         }
     ],
     "Delhi": [
         {
-            "name": "OYO Flagship Hotel Elite Inn",
+            "name": "The Imperial, New Delhi",
             "price": 7.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO Hotel Suzu Inn",
+            "name": "The LaLiT New Delhi",
             "price": 8.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Hotel Crown Continental Near Sarai Rohilla Railway Station",
+            "name": "Haveli Dharampura - UNESCO awarded Boutique Heritage Hotel",
             "price": 9.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Hotel Shanti Plaza-by Haveliya Hotels",
+            "name": "Sahib Farms & Resorts Villa",
             "price": 11.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Hotel Glow Inn Paharganj-3 Mins Walk From New Delhi Railway Station",
+            "name": "Le Meridien New Delhi",
             "price": 11.0,
             "image_path": "../static/assets/"
         }
@@ -87,49 +87,49 @@ hotels={
             "image_path": "../static/assets/"
         },
         {
-            "name": "Life SPG Grand",
+            "name": "Trident Hyderabad",
             "price": 13.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO Siri Inn guest house",
+            "name": "ITC Kohenur, a Luxury Collection Hotel, Hyderabad",
             "price": 14.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "102 Paramount Tower",
+            "name": "Novotel Hyderabad Airport",
             "price": 14.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "FabHotel Rooms 27",
+            "name": "Le Meridien Hyderabad",
             "price": 16.0,
             "image_path": "../static/assets/"
         }
     ],
     "Kolkata": [
         {
-            "name": "KH Guest House",
+            "name": "Taj Bengal",
             "price": 9.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Hotel green land",
+            "name": "Kenilworth Hotel, Kolkata",
             "price": 10.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "OYO Binayak Inn",
+            "name": "Hyatt Centric Ballygunge Kolkata",
             "price": 11.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Collection O Heritage VIP Road",
+            "name": "The Glenburn Penthouse",
             "price": 12.0,
             "image_path": "../static/assets/"
         },
         {
-            "name": "Golden Heaven Hotel",
+            "name": "JW Marriott Hotel Kolkata",
             "price": 13.0,
             "image_path": "../static/assets/"
         }
