@@ -3,135 +3,135 @@ hotels={
         {
             "name": "The Oberoi Bengaluru",
             "price": 6.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/b1.png"
         },
         {
             "name": "The Leela Palace Bengaluru",
             "price": 7.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/b2.png"
         },
         {
             "name": "H&R Villa",
             "price": 7.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/b3.png"
         },
         {
             "name": "Conrad Bengaluru",
             "price": 7.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/b4.png"
         },
         {
             "name": "Taj West End",
             "price": 8.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/b5.png"
         }
     ],
     "Chennai": [
         {
             "name": "The Leela Palace Chennai",
             "price": 8.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/c1.png"
         },
         {
-            "name": "ITC Grand Chola, a Luxury Collection Hotel, Chennai",
+            "name": "ITC Grand Chola",
             "price": 10.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/c2.png"
         },
         {
             "name": "Mer Vue Villa, Kovalam, ECR, Chennai",
             "price": 10.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/c3.png"
         },
         {
             "name": "Taj Wellington Mews Chennai",
             "price": 11.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/c4.png"
         },
         {
             "name": "Radisson Blu Hotel & Suites GRT Chennai",
             "price": 11.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/c5.png"
         }
     ],
     "Delhi": [
         {
             "name": "The Imperial, New Delhi",
             "price": 7.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/d1.png"
         },
         {
             "name": "The LaLiT New Delhi",
             "price": 8.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/d2.png"
         },
         {
             "name": "Haveli Dharampura - UNESCO awarded Boutique Heritage Hotel",
             "price": 9.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/d3.png"
         },
         {
             "name": "Sahib Farms & Resorts Villa",
             "price": 11.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/d4.png"
         },
         {
             "name": "Le Meridien New Delhi",
             "price": 11.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/d5.png"
         }
     ],
-    "Hydrabad": [
+    "Hyderabad": [
         {
             "name": "Taj Falaknuma Palace",
             "price": 7.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/h1.png"
         },
         {
             "name": "Trident Hyderabad",
             "price": 13.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/h2.png"
         },
         {
             "name": "ITC Kohenur, a Luxury Collection Hotel, Hyderabad",
             "price": 14.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/h3.png"
         },
         {
             "name": "Novotel Hyderabad Airport",
             "price": 14.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/h4.png"
         },
         {
             "name": "Le Meridien Hyderabad",
             "price": 16.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/h5.png"
         }
     ],
     "Kolkata": [
         {
             "name": "Taj Bengal",
             "price": 9.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/k1.png"
         },
         {
             "name": "Kenilworth Hotel, Kolkata",
             "price": 10.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/k2.png"
         },
         {
             "name": "Hyatt Centric Ballygunge Kolkata",
             "price": 11.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/k3.png"
         },
         {
             "name": "The Glenburn Penthouse",
             "price": 12.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/k4.png"
         },
         {
             "name": "JW Marriott Hotel Kolkata",
             "price": 13.0,
-            "image_path": "../static/assets/"
+            "image_path": "static/assets/k5.png"
         }
     ],
     "Mumbai": [
